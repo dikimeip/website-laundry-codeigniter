@@ -16,8 +16,15 @@ class LoginController extends CI_Controller
 	public function DoLogin()
 	{
 		$level = $this->input->post('level');
+		$email = $this->input->post('email');
+		$password = $this->input->post('password');
 		if ($level == '0') {
-			echo "KARYAWAN";
+			$login = $this->Models->Loginuser($email,$password);
+			if (count($login) > 0 ) {
+				echo "KARYAWAN";
+			} else {
+				echo "Gagal Login";
+			}
 		} elseif ($level == '1') {
 			echo "ADMIN";
 		} else {
