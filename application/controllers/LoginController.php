@@ -13,5 +13,17 @@ class LoginController extends CI_Controller
 		$this->load->view('login');
 	}
 
+	public function DoLogin()
+	{
+		$level = $this->input->post('level');
+		if ($level == '0') {
+			echo "KARYAWAN";
+		} elseif ($level == '1') {
+			echo "ADMIN";
+		} else {
+			echo "NotShow";
+		}
+	}
+
 
 }

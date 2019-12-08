@@ -12,7 +12,7 @@
 	<br>
 	<div class="panel panel-default">
 		<div class="panel-heading">
-			<form action="" method="post">
+			<form action=" <?php echo base_url('LoginController/DoLogin') ?> " method="post">
 				<div class="form-group">
 					<label>MASUKAN USERNAME ATAU EMAIL</label>
 					<input type="text" name="email" class="form-control">
@@ -22,9 +22,9 @@
 					<input type="password" name="password" class="form-control">
 				</div>
 				<div class="form-group">
-					<select class="form-control">
-						<option>KARYAWAN</option>
-						<option>OWNER</option>
+					<select class="form-control" name="level">
+						<option value="0">KARYAWAN</option>
+						<option value="1">OWNER</option>
 					</select>
 				</div>
 				<input type="submit" name="simpan" value="REGISTER" class="btn btn-info" >
