@@ -17,7 +17,7 @@ class LoginController extends CI_Controller
 	{
 		$level = $this->input->post('level');
 		$email = $this->input->post('email');
-		$password = $this->input->post('password');
+		$password = md5($this->input->post('password'));
 		if ($level == '0') {
 			$login = $this->Models->Loginuser($email,$password);
 			if (count($login) > 0 ) {
@@ -26,7 +26,12 @@ class LoginController extends CI_Controller
 				echo "Gagal Login";
 			}
 		} elseif ($level == '1') {
-			echo "ADMIN";
+			$loginn = $this->Models->LoginAdmin($email,$password);
+			if (count($loginn) > 0 ) {
+				echo "ADMIN";
+			} else {
+				echo "Gagal Login";
+			}
 		} else {
 			echo "NotShow";
 		}

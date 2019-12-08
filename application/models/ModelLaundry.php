@@ -11,4 +11,12 @@ class ModelLaundry extends CI_Model
 			'active_karyawan'	=> 1
 		))->result_array();
 	}
+
+	public function LoginAdmin($email,$password)
+	{
+		return $this->db->get_where('admin',array(
+			'email_admin' => $email,
+			'password_admin' => $password
+		))->result_array();
+	}
 }
