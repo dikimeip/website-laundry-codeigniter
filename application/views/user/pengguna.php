@@ -5,7 +5,7 @@
 		<a href=" <?php echo base_url('UserController/post_user') ?> " class="btn btn-info">TAMBAH</a>
 	</div>
 	<div class="col-md-4">
-		<form>
+		<form action="<?php echo base_url('UserController/cari_user') ?>" method="post">
 			<div class="form-group">
 				<input type="text" name="cari" class="form-control" placeholder="Masukan Nama User">
 			</div>

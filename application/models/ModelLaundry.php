@@ -40,4 +40,13 @@ class ModelLaundry extends CI_Model
 		$this->db->where('id_user',$id);
 		return $this->db->update('user',$data);
 	}
+
+	public function cari_user()
+	{
+		$data = $this->input->post('cari');
+		$this->db->select('*');
+		$this->db->from('user');
+		$this->db->like('nama_user',$data);
+		return $this->db->get()->result_array();
+	}
 }
