@@ -57,6 +57,7 @@ class UserController extends CI_Controller
 		 		'alamat_user' => $this->input->post('alamat'),
 		 		'hp_user' => $this->input->post('hp'),
 		 		'email_user' => $this->input->post('email'),
+		 		'ket_user' => 'User'
 		 	];
 		 	$query = $this->Models->post_user($data);
 		 	if ($query) {
@@ -67,6 +68,15 @@ class UserController extends CI_Controller
 		 		redirect('UserController/user');
 		 	}
 		 }
+	}
+
+	public function edit_user($id)
+	{
+		$data['user'] = $this->Models->get_id_user($id);
+		$this->load->view('template/header');
+		$this->load->view('template/menu');
+		$this->load->view('user/edit_pengguna',$data);
+		$this->load->view('template/footer');
 	}
 
 }

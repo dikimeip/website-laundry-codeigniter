@@ -36,7 +36,7 @@
 			<td><?php echo $u['hp_user'] ?></td>
 			<td><?php echo $u['email_user'] ?></td>
 			<td><?php echo $u['ket_user'] ?></td>
-			<td><a href="" class="btn btn-success btn-sm">EDIT</a></td>
+			<td><a href="<?php echo base_url() ?>UserController/edit_user/<?php echo $u['id_user'] ?>" class="btn btn-success btn-sm">EDIT</a></td>
 		</tr>
 	<?php endforeach ?>
 </table>

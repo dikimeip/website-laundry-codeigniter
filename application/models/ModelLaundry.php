@@ -29,4 +29,9 @@ class ModelLaundry extends CI_Model
 	{
 		return $this->db->insert('user',$data);
 	}
+
+	public function get_id_user($id)
+	{
+		return $this->db->get_where('user',['id_user' => $id])->row_array();
+	}
 }
