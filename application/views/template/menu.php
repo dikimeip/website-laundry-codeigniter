@@ -53,7 +53,7 @@
                                 <a class="nav-link" href="#"><i class="fa fa-fw fa-info"></i>Proses</a>
                             </li>
                              <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-fw fa-user"></i>Pelanggan</a>
+                                <a class="nav-link" href=" <?php echo base_url('UserController/user') ?> "><i class="fa fa-fw fa-user"></i>Pelanggan</a>
                             </li>
                              <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fa fa-fw fa-cog"></i>Setting</a>

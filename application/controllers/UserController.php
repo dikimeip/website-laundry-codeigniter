@@ -22,10 +22,11 @@ class UserController extends CI_Controller
 
 	public function user()
 	{
-		$user = $this->Models->get_user();
+		$data['user'] = $this->Models->get_user();
+		$data['no']=1;
 		$this->load->view('template/header');
 		$this->load->view('template/menu');
-		$this->load->view('user/pengguna',$user);
+		$this->load->view('user/pengguna',$data);
 		$this->load->view('template/footer');
 	}
 
