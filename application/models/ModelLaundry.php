@@ -34,4 +34,10 @@ class ModelLaundry extends CI_Model
 	{
 		return $this->db->get_where('user',['id_user' => $id])->row_array();
 	}
+
+	public function edit_user($data,$id)
+	{
+		$this->db->where('id_user',$id);
+		return $this->db->update('user',$data);
+	}
 }

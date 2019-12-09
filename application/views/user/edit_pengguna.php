@@ -1,7 +1,7 @@
 <h1>EDIT PELANGGAN LAUNDRY</h1>
 <br>
-<form action="" method="post">
-	<input type="hidden" name="nama" class="form-control" value="<?php echo $user['id_user'] ?>">
+<form action=" <?php echo base_url('UserController/do_edituser') ?> " method="post">
+	<input type="hidden" name="id" class="form-control" value="<?php echo $user['id_user'] ?>">
 	<div class="form-group">
 		<label>Masukan Nama User</label>
 		<input required="" type="text" name="nama" class="form-control" value="<?php echo $user['nama_user'] ?>">

@@ -79,4 +79,25 @@ class UserController extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
+	public function do_edituser()
+	{
+		$data = [
+		 		'nama_user' => $this->input->post('nama'),
+		 		'alamat_user' => $this->input->post('alamat'),
+		 		'hp_user' => $this->input->post('hp'),
+		 		'email_user' => $this->input->post('email'),
+		 		'ket_user' => $this->input->post('ket')
+		 	];
+		$id = $this->input->post('id');
+
+		$query = $this->Models->edit_user($data,$id);
+		if ($query) {
+			$this->session->set_flashdata('success','Edit data berhasil dilakukan');
+		 	redirect('UserController/user');
+		} else {
+			$this->session->set_flashdata('success','Edit data Gagal dilakukan');
+		 	redirect('UserController/user');
+		}
+	}
+
 }
