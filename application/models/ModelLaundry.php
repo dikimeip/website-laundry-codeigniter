@@ -19,4 +19,9 @@ class ModelLaundry extends CI_Model
 			'password_admin' => $password
 		))->result_array();
 	}
+
+	public function get_user()
+	{
+		return $this->db->get('user')->result_array();
+	}
 }

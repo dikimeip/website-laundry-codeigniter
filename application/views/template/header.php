@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>asset/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>asset/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>asset/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <title>SI LAUNDRY</title>
+    <title>MY LAUNDRY</title>
 </head>
 
 <body>
