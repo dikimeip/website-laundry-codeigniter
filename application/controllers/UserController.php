@@ -52,7 +52,20 @@ class UserController extends CI_Controller
 			$this->load->view('user/tambah_pengguna');
 			$this->load->view('template/footer');
 		 } else {
-		 	echo "Ok";
+		 	$data = [
+		 		'nama_user' => $this->input->post('nama'),
+		 		'alamat_user' => $this->input->post('alamat'),
+		 		'hp_user' => $this->input->post('hp'),
+		 		'email_user' => $this->input->post('email'),
+		 	];
+		 	$query = $this->Models->post_user($data);
+		 	if ($query) {
+		 		$this->session->set_flashdata('success','Tambah data berhasil dilakukan');
+		 		redirect('UserController/user');
+		 	} else {
+		 		$this->session->set_flashdata('success','Tambah Gagal dilakukan');
+		 		redirect('UserController/user');
+		 	}
 		 }
 	}
 

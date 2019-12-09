@@ -24,4 +24,9 @@ class ModelLaundry extends CI_Model
 	{
 		return $this->db->get('user')->result_array();
 	}
+
+	public function post_user($data)
+	{
+		return $this->db->insert('user',$data);
+	}
 }
