@@ -98,6 +98,18 @@ class AdminController extends CI_Controller
 
 	}
 
+	public function delete_paket($id)
+	{
+		$del = $this->Models->delete_paket($id);
+		if ($del) {
+			$this->session->set_flashdata('success','hapus paket berhasil');
+			redirect('AdminController/paket');
+		} else {
+			$this->session->set_flashdata('success','hapus paket gagal');
+			redirect('AdminController/paket');
+		}
+	}
+
 
 	
 }

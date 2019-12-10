@@ -70,4 +70,10 @@ class ModelLaundry extends CI_Model
 		$this->db->where('id_paket',$id);
 		return $this->db->update('paket',$data);
 	}
+
+	public function delete_paket($id)
+	{
+		$this->db->where('id_paket',$id);
+		return $this->db->delete('paket');
+	}
 }

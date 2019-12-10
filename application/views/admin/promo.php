@@ -35,8 +35,8 @@
 			<td><?php echo $paket['keterangan_paket'] ?></td>
 			<td><?php echo $paket['active_paket'] ?></td>
 			<td>
-				<a href="<?php echo base_url() ?>AdminController/edit_paket/<?php echo $paket['id_paket']  ?> " class="btn btn-success btn-sm">EDIT</a>
-				<a href="" class="btn btn-warning btn-sm">HAPUS</a>
+				<a href="<?php echo base_url() ?>AdminController/edit_paket/<?php echo $paket['id_paket'] ?>" class="btn btn-success btn-sm">EDIT</a>
+				<a onclick="return confirm('Yakin Akan Dihapus..??') " href="<?php echo base_url() ?>AdminController/delete_paket/<?php echo $paket['id_paket'] ?>" class="btn btn-warning btn-sm">HAPUS</a>
 			</td>
 		</tr>
 	<?php endforeach ?>
