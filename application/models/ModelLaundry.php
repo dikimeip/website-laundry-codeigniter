@@ -64,4 +64,10 @@ class ModelLaundry extends CI_Model
 	{
 		return $this->db->get_where('paket',['id_paket' => $id])->row_array();
 	}
+
+	public function edit_paket($id,$data)
+	{
+		$this->db->where('id_paket',$id);
+		return $this->db->update('paket',$data);
+	}
 }

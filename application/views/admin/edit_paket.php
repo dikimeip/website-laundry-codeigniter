@@ -1,8 +1,9 @@
 <h1>TAMBAH PAKET PROMO</h1>
 <hr>
-<form action="<?php echo base_url('AdminController/do_paket') ?>" method="post">
+<form action="<?php echo base_url('AdminController/do_edit_paket') ?>" method="post">
 	<div class="form-group">
 		<label>Masukan Nama Paket Promo</label>
+		<input type="hidden" name="id" class="form-control" value="<?php echo $paket['id_paket'] ?>">
 		<input type="text" name="nama" class="form-control" value="<?php echo $paket['nama_paket'] ?>">
 	</div>
 	<div class="form-group">

@@ -43,7 +43,7 @@ class AdminController extends CI_Controller
 	public function do_paket()
 	{
 		$this->form_validation->set_rules('nama','Nama','required|max[20]');
-		$this->form_validation->set_rules('ket','Keterangan','required|max[100]');
+		$this->form_validation->set_rules('ket','Keterangan','required');
 		if ($this->form_validation->run() == false) {
 			$this->load->view('template/header');
 			$this->load->view('template/menuadmin');
@@ -61,6 +61,9 @@ class AdminController extends CI_Controller
 			if ($insert) {
 				$this->session->set_flashdata('success','menambahkan paket berhasil');
 				redirect('AdminController/paket');
+			} else {
+				$this->session->set_flashdata('success','menambahkan paket gaga;');
+				redirect('AdminController/paket');
 			}
 		}
 	}
@@ -72,6 +75,27 @@ class AdminController extends CI_Controller
 		$this->load->view('template/menuadmin');
 		$this->load->view('admin/edit_paket',$data);
 		$this->load->view('template/footer');
+	}
+
+	public function do_edit_paket()
+	{
+		$id = $this->input->post('id');
+		$data = [
+			'nama_paket' => $this->input->post('nama'),
+			'keterangan_paket' => $this->input->post('ket'),
+			'active_paket' => $this->input->post('status')
+		];
+
+		$update = $this->Models->edit_paket($id,$data);
+
+		if ($update) {
+			$this->session->set_flashdata('success','update paket berhasil');
+			redirect('AdminController/paket');
+		} else {
+			$this->session->set_flashdata('success','update paket gagal');
+			redirect('AdminController/paket');
+		}
+
 	}
 
 
