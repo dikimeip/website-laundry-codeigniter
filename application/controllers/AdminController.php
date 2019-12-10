@@ -116,10 +116,16 @@ class AdminController extends CI_Controller
 		$cari = $this->input->post('cari');
 		$data['pakets'] = $this->Models->search_paket($cari);
 		$data['no'] = 1;
-		$this->load->view('template/header');
-		$this->load->view('template/menuadmin');
-		$this->load->view('admin/promo',$data);
-		$this->load->view('template/footer');
+		if (count($data['pakets']) > 0 ) {
+			$this->load->view('template/header');
+			$this->load->view('template/menuadmin');
+			$this->load->view('admin/promo',$data);
+			$this->load->view('template/footer');
+		} else {
+			$this->session->set_flashdata('success','data paket tidak ditemukan');
+			redirect('AdminController/paket');
+		}
+	
 	}
 
 
