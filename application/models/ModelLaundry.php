@@ -76,4 +76,12 @@ class ModelLaundry extends CI_Model
 		$this->db->where('id_paket',$id);
 		return $this->db->delete('paket');
 	}
+
+	public function search_paket($cari)
+	{
+		$this->db->select('*');
+		$this->db->from('paket');
+		$this->db->like('nama_paket',$cari);
+		return $this->db->get()->result_array();
+	}
 }
