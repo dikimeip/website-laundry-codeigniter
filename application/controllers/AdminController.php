@@ -10,6 +10,7 @@ class AdminController extends CI_Controller
 		parent::__construct();
 		$this->load->model('ModelLaundry','Models');
 		$this->load->library('session');
+		$this->load->library('form_validation');
 		$this->load->helper('form');
 	}
 
@@ -37,6 +38,20 @@ class AdminController extends CI_Controller
 		$this->load->view('template/menuadmin');
 		$this->load->view('admin/add_paket');
 		$this->load->view('template/footer');
+	}
+
+	public function do_paket()
+	{
+		$this->form_validation->set_rules('nama','Nama','required|max[20]');
+		$this->form_validation->set_rules('ket','Keterangan','required|max[100]');
+		if ($this->form_validation->run() == false) {
+			$this->load->view('template/header');
+			$this->load->view('template/menuadmin');
+			$this->load->view('admin/add_paket');
+			$this->load->view('template/footer');
+		} else {
+			echo "Ok";
+		}
 	}
 
 
