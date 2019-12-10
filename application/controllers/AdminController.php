@@ -31,6 +31,14 @@ class AdminController extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
-	
+	public function TambahPaket()
+	{
+		$this->load->view('template/header');
+		$this->load->view('template/menuadmin');
+		$this->load->view('admin/add_paket');
+		$this->load->view('template/footer');
+	}
+
+
 	
 }
