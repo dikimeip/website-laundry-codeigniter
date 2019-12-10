@@ -27,8 +27,14 @@
 						<option value="1">OWNER</option>
 					</select>
 				</div>
-				<input type="submit" name="simpan" value="REGISTER" class="btn btn-info" >
+				<input type="submit" name="simpan" value="LOGIN" class="btn btn-info" >
 			</form>
+			<br>
+			<?php if ($this->session->flashdata('gagal')): ?>
+				<div class="alert alert-danger">
+					<?php echo $this->session->flashdata('gagal') ?>
+				</div>
+			<?php endif ?>
 		</div>
 	</div>
 </div>

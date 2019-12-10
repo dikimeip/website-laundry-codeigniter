@@ -21,14 +21,15 @@ class LoginController extends CI_Controller
 		if ($level == '0') {
 			$login = $this->Models->Loginuser($email,$password);
 			if (count($login) > 0 ) {
-				echo "KARYAWAN";
+				redirect('UserController/index');
 			} else {
-				echo "Gagal Login";
+				$this->session->set_flashdata('gagal','Login Gagal..');
+				redirect('LoginController/index');
 			}
 		} elseif ($level == '1') {
 			$loginn = $this->Models->LoginAdmin($email,$password);
 			if (count($loginn) > 0 ) {
-				echo "ADMIN";
+				redirect('AdminController/index');
 			} else {
 				echo "Gagal Login";
 			}
