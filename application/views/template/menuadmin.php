@@ -39,7 +39,7 @@
                                 Menu
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo base_url('UserController') ?>"><i class="fa fa-fw fa-home"></i>Dasboard</a>
+                                <a class="nav-link" href="<?php echo base_url('AdminController') ?>"><i class="fa fa-fw fa-home"></i>Dasboard</a>
                             </li>
                              <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fa fa-fw fa-plus"></i>Transaksi</a>

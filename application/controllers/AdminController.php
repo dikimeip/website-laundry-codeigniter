@@ -52,10 +52,12 @@ class AdminController extends CI_Controller
 		} else {
 			$data = [
 				'nama_paket' => $this->input->post('nama'),
-				'tanggal_paket' => date('yyyy-mm-dd'),
+				'tanggal_paket' => date('Y-m-d'),
 				'keterangan_paket' => $this->input->post('ket'),
 				'active_paket' => 'Active'
 			];
+
+			//var_dump($data);
 
 			$insert = $this->Models->post_paket($data);
 			if ($insert) {

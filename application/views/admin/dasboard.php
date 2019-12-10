@@ -1,1 +1,1 @@
-<h1>ADMIN DASBOARD</h1>
+<h1>ADMIN DASBOARD <?php echo date('Y-m-d') ?> </h1>
