@@ -6,13 +6,13 @@ class LoginController extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('ModelLaundry','Models');
+		$this->load->library('session');
+		$this->load->helper('form');
 	}
 
 	public function index()
 	{
 		$this->load->view('login');
-		$this->load->library('session');
-		$this->load->helper('form');
 	}
 
 	public function DoLogin()

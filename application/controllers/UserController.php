@@ -23,7 +23,7 @@ class UserController extends CI_Controller
 		//$data['ses'] = $this->session->userdata('isUser');
 		$this->load->view('template/header');
 		$this->load->view('template/menu');
-		$this->load->view('user/dasboard',$data);
+		$this->load->view('user/dasboard');
 		$this->load->view('template/footer');
 	}
 
