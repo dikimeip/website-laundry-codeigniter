@@ -54,4 +54,9 @@ class ModelLaundry extends CI_Model
 	{
 		return $this->db->get('paket')->result_array();
 	}
+
+	public function post_paket($data)
+	{
+		return $this->db->insert('paket',$data);
+	}
 }

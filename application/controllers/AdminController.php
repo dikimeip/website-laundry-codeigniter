@@ -50,7 +50,18 @@ class AdminController extends CI_Controller
 			$this->load->view('admin/add_paket');
 			$this->load->view('template/footer');
 		} else {
-			echo "Ok";
+			$data = [
+				'nama_paket' => $this->input->post('nama'),
+				'tanggal_paket' => date('yyyy-mm-dd'),
+				'keterangan_paket' => $this->input->post('ket'),
+				'active_paket' => 'Active'
+			];
+
+			$insert = $this->Models->post_paket($data);
+			if ($insert) {
+				$this->session->set_flashdata('success','menambahkan paket berhasil');
+				redirect('AdminController/paket');
+			}
 		}
 	}
 
