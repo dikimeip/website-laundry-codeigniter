@@ -36,11 +36,6 @@
     <!-- morris js -->
     <script src="<?php echo base_url() ?>asset/vendor/charts/morris-bundle/raphael.min.js"></script>
     <script src="<?php echo base_url() ?>asset/vendor/charts/morris-bundle/morris.js"></script>
-    <!-- chart c3 js -->
-    <script src="<?php echo base_url() ?>asset/vendor/charts/c3charts/c3.min.js"></script>
-    <script src="<?php echo base_url() ?>asset/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
-    <script src="<?php echo base_url() ?>asset/vendor/charts/c3charts/C3chartjs.js"></script>
-    <script src="<?php echo base_url() ?>asset/libs/js/dashboard-ecommerce.js"></script>
 </body>
  
 </html>

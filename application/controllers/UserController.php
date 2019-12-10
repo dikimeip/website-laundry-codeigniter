@@ -12,13 +12,18 @@ class UserController extends CI_Controller
 		$this->load->model('ModelLaundry','Models');
 		$this->load->helper(array('form', 'url'));
 		$this->load->library('form_validation');
+		$this->load->library('session');
+		// if ($this->session->userdata('isUser')) {
+		// 	redirect('LoginController/index');
+		// }
 	}
 	
 	public function index()
 	{
+		//$data['ses'] = $this->session->userdata('isUser');
 		$this->load->view('template/header');
 		$this->load->view('template/menu');
-		$this->load->view('user/dasboard');
+		$this->load->view('user/dasboard',$data);
 		$this->load->view('template/footer');
 	}
 

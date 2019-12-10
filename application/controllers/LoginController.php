@@ -11,6 +11,8 @@ class LoginController extends CI_Controller
 	public function index()
 	{
 		$this->load->view('login');
+		$this->load->library('session');
+		$this->load->helper('form');
 	}
 
 	public function DoLogin()
@@ -22,6 +24,7 @@ class LoginController extends CI_Controller
 			$login = $this->Models->Loginuser($email,$password);
 			if (count($login) > 0 ) {
 				redirect('UserController/index');
+				$this->session->set_userdata('ok');
 			} else {
 				$this->session->set_flashdata('gagal','Login Gagal..');
 				redirect('LoginController/index');
@@ -30,6 +33,7 @@ class LoginController extends CI_Controller
 			$loginn = $this->Models->LoginAdmin($email,$password);
 			if (count($loginn) > 0 ) {
 				redirect('AdminController/index');
+				$this->session->set_userdata('ok');
 			} else {
 				echo "Gagal Login";
 			}
@@ -37,6 +41,14 @@ class LoginController extends CI_Controller
 			echo "NotShow";
 		}
 	}
+
+	public function logout()
+	{
+		$this->session->unset_userdata('ok');
+		redirect('LoginController/index');
+	}
+
+
 
 
 }
