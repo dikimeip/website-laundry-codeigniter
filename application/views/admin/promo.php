@@ -35,7 +35,7 @@
 			<td><?php echo $paket['keterangan_paket'] ?></td>
 			<td><?php echo $paket['active_paket'] ?></td>
 			<td>
-				<a href="" class="btn btn-success btn-sm">EDIT</a>
+				<a href="<?php echo base_url() ?>AdminController/edit_paket/<?php echo $paket['id_paket']  ?> " class="btn btn-success btn-sm">EDIT</a>
 				<a href="" class="btn btn-warning btn-sm">HAPUS</a>
 			</td>
 		</tr>

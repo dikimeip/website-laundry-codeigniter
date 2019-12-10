@@ -57,14 +57,21 @@ class AdminController extends CI_Controller
 				'active_paket' => 'Active'
 			];
 
-			//var_dump($data);
-
 			$insert = $this->Models->post_paket($data);
 			if ($insert) {
 				$this->session->set_flashdata('success','menambahkan paket berhasil');
 				redirect('AdminController/paket');
 			}
 		}
+	}
+
+	public function edit_paket($id)
+	{
+		$data['paket'] = $this->Models->get_id_paket($id);
+		$this->load->view('template/header');
+		$this->load->view('template/menuadmin');
+		$this->load->view('admin/edit_paket',$data);
+		$this->load->view('template/footer');
 	}
 
 

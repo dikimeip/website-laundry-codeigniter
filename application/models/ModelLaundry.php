@@ -59,4 +59,9 @@ class ModelLaundry extends CI_Model
 	{
 		return $this->db->insert('paket',$data);
 	}
+
+	public function get_id_paket($id)
+	{
+		return $this->db->get_where('paket',['id_paket' => $id])->row_array();
+	}
 }
