@@ -49,4 +49,9 @@ class ModelLaundry extends CI_Model
 		$this->db->like('nama_user',$data);
 		return $this->db->get()->result_array();
 	}
+
+	public function get_paket()
+	{
+		return $this->db->get('paket')->result_array();
+	}
 }

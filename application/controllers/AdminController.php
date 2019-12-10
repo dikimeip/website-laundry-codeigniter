@@ -23,11 +23,14 @@ class AdminController extends CI_Controller
 
 	public function paket()
 	{
-		//$data['pakets'] = $this->Models->get_paket();
+		$data['pakets'] = $this->Models->get_paket();
+		$data['no'] = 1;
 		$this->load->view('template/header');
 		$this->load->view('template/menuadmin');
-		$this->load->view('admin/promo');
+		$this->load->view('admin/promo',$data);
 		$this->load->view('template/footer');
 	}
+
+	
 	
 }
