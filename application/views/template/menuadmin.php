@@ -45,13 +45,13 @@
                                 <a class="nav-link" href="#"><i class="fa fa-fw fa-plus"></i>Transaksi</a>
                             </li>
                              <li class="nav-item">
-                                <a class="nav-link" href=" <?php echo base_url('UserController/user') ?> "><i class="fa fa-fw fa-user"></i>Pelanggan</a>
+                                <a class="nav-link" href=""><i class="fa fa-fw fa-user"></i>Pelanggan</a>
                             </li>
                              <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fa fa-fw fa-cog"></i>Karyawan</a>
                             </li>
                              <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-fw fa-plus"></i>Paket Promo</a>
+                                <a class="nav-link" href="<?php echo base_url('AdminController/paket') ?> "><i class="fa fa-fw fa-plus"></i>Paket Promo</a>
                             </li>
                              <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>

@@ -20,5 +20,14 @@ class AdminController extends CI_Controller
 		$this->load->view('admin/dasboard');
 		$this->load->view('template/footer');
 	}
+
+	public function paket()
+	{
+		//$data['pakets'] = $this->Models->get_paket();
+		$this->load->view('template/header');
+		$this->load->view('template/menuadmin');
+		$this->load->view('admin/promo');
+		$this->load->view('template/footer');
+	}
 	
 }
