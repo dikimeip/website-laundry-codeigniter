@@ -172,4 +172,14 @@ class UserController extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
+	public function ProsesTrans()
+	{
+		$data['trans'] = $this->Models->get_alltrans();
+		$data['no'] =1;
+		$this->load->view('template/header');
+		$this->load->view('template/menu');
+		$this->load->view('user/ProsesTransaksi',$data);
+		$this->load->view('template/footer');
+	}
+
 }
