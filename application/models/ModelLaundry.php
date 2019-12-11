@@ -111,6 +111,6 @@ class ModelLaundry extends CI_Model
 		$this->db->join('user','user.id_user = transaksi.id_user');
 		$this->db->join('paket','paket.id_paket = transaksi.id_paket');
 		$this->db->where('id_transaksi',$id);
-		return $this->db->get()->result_array();
+		return $this->db->get()->row_array();
 	}
 }

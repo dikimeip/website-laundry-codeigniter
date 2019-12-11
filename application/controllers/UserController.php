@@ -165,7 +165,11 @@ class UserController extends CI_Controller
 	public function show_trans($id)
 	{
 		$data['trans'] = $this->Models->get_id_trans($id);
-		var_dump($data['trans']);
+		//var_dump($data['trans']);
+		$this->load->view('template/header');
+		$this->load->view('template/menu');
+		$this->load->view('user/show_transaksi',$data);
+		$this->load->view('template/footer');
 	}
 
 }
