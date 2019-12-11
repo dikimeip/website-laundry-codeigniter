@@ -209,4 +209,16 @@ class UserController extends CI_Controller
 		}
 	}
 
+	public function hapus_transaksi($id)
+	{
+		$query = $this->Models->delete_transaksi($id);
+		if ($query) {
+			$this->session->set_flashdata('success','Transaksi berhasil Dihapus');
+			redirect('UserController/ProsesTrans');
+		} else {
+			$this->session->set_flashdata('success','Transaksi Gagal Dihapus');
+			redirect('UserController/ProsesTrans');
+		}
+	}
+
 }

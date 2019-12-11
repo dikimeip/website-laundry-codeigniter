@@ -25,7 +25,7 @@
 			<td><?php echo $t['status_transaksi'] ?></td>
 			<td>
 				<a href="<?php echo base_url() ?>UserController/edit_transaksi/<?php echo $t['id_transaksi'] ?>" class="btn btn-info btn-sm">EDIT</a>
-				<a href="" class="btn btn-danger btn-sm">HAPUS</a>
+				<a href="<?php echo base_url() ?>UserController/hapus_transaksi/<?php echo $t['id_transaksi'] ?>" onclick="return confirm('Hapus Data..??')" class="btn btn-danger btn-sm">HAPUS</a>
 			</td>
 		</tr>
 	<?php endforeach ?>
