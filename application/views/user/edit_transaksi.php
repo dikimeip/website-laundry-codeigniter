@@ -1,5 +1,5 @@
 <h1>EDIT TRANSAKSI</h1>
-<form action="<?php echo base_url('UserController/do_tambahtrans') ?>" method="post">
+<form action="<?php echo base_url('UserController/do_edittrans') ?>" method="post">
 	<div class="form-group">
 		<label>Masukan Nama Pelanggan</label>
 		<input type="hidden" name="id" value="<?php echo $trans['id_transaksi'] ?>">

@@ -191,4 +191,22 @@ class UserController extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
+	public function do_edittrans()
+	{
+		$id = $this->input->post('id');
+		$data = [
+			'keterangan_transaksi' => $this->input->post('ket'),
+			'status_transaksi' => $this->input->post('status')
+		];
+
+		$query = $this->Models->edit_transaksi($id,$data);
+		if ($query) {
+			$this->session->set_flashdata('success','Transaksi berhasil Diubah');
+			redirect('UserController/ProsesTrans');
+		} else {
+			$this->session->set_flashdata('success','Transaksi Gagal Diubah');
+			redirect('UserController/ProsesTrans');
+		}
+	}
+
 }

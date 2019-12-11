@@ -113,4 +113,10 @@ class ModelLaundry extends CI_Model
 		$this->db->where('id_transaksi',$id);
 		return $this->db->get()->row_array();
 	}
+
+	public function edit_transaksi($id,$data)
+	{
+		$this->db->where('id_transaksi',$id);
+		return $this->db->update('transaksi',$data);
+	}
 }
