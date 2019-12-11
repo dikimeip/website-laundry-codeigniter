@@ -22,6 +22,7 @@ class ModelLaundry extends CI_Model
 
 	public function get_user()
 	{
+		$this->db->order_by('nama_user', 'DESC');
 		return $this->db->get('user')->result_array();
 	}
 
@@ -101,6 +102,7 @@ class ModelLaundry extends CI_Model
 		$this->db->from('transaksi');
 		$this->db->join('user','user.id_user = transaksi.id_user');
 		$this->db->join('paket','paket.id_paket = transaksi.id_paket');
+		$this->db->order_by('id_transaksi', 'DESC');
 		return $this->db->get()->result_array();
 	}
 
