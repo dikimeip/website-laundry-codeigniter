@@ -133,4 +133,24 @@ class UserController extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
+	public function do_tambahtrans()
+	{
+		$id = $this->input->post('paket');
+		$berat = $this->input->post('berat');
+		$paket = $this->Models->get_id_paket($id);
+		$kali = $paket['harga_paket'] * $berat;
+		
+		$data = [
+			'id_user' => $this->input->post('user'),
+			'id_paket' => $id,
+			'berat_transaksi' => $berat,
+			'tanggal_masuk_transaksi' => date('Y-m-d'),
+			'harga_total' => $kali,
+			'keterangan_transaksi' => $this->input->post('ket'),
+			'status_transaksi' => 'Baru'
+		];
+
+		var_dump($data);
+	}
+
 }
