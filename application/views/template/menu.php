@@ -42,16 +42,13 @@
                                 <a class="nav-link" href="<?php echo base_url('UserController') ?>"><i class="fa fa-fw fa-home"></i>Dasboard</a>
                             </li>
                              <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-fw fa-plus"></i>Transaksi</a>
+                                <a class="nav-link" href="<?php echo base_url('UserController/transaksi') ?>"><i class="fa fa-fw fa-plus"></i>Transaksi</a>
                             </li>
                              <li class="nav-item">
                                 <a class="nav-link" href="#"><i class="fa fa-fw fa-info"></i>Proses</a>
                             </li>
                              <li class="nav-item">
                                 <a class="nav-link" href=" <?php echo base_url('UserController/user') ?> "><i class="fa fa-fw fa-user"></i>Pelanggan</a>
-                            </li>
-                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-fw fa-cog"></i>Setting</a>
                             </li>
                              <li class="nav-item">
                                 <a class="nav-link" href="<?php echo base_url('LoginController/logout')?>"><i class="fas fa-power-off mr-2"></i>Logout</a>
