@@ -182,4 +182,13 @@ class UserController extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
+	public function edit_transaksi($id)
+	{
+		$data['trans'] = $this->Models->get_id_trans($id);
+		$this->load->view('template/header');
+		$this->load->view('template/menu');
+		$this->load->view('user/edit_transaksi',$data);
+		$this->load->view('template/footer');
+	}
+
 }
