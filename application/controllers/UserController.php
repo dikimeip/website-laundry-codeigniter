@@ -162,4 +162,10 @@ class UserController extends CI_Controller
 		}
 	}
 
+	public function show_trans($id)
+	{
+		$data['trans'] = $this->Models->get_id_trans($id);
+		var_dump($data['trans']);
+	}
+
 }
