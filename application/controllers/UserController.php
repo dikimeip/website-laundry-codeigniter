@@ -123,4 +123,12 @@ class UserController extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
+	public function tambah_transaksi()
+	{
+		$this->load->view('template/header');
+		$this->load->view('template/menu');
+		$this->load->view('user/tambah_transaksi');
+		$this->load->view('template/footer');
+	}
+
 }
