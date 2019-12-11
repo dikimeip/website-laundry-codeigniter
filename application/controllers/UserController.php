@@ -125,9 +125,11 @@ class UserController extends CI_Controller
 
 	public function tambah_transaksi()
 	{
+		$data['paket'] = $this->Models->paket_active();
+		$data['user'] = $this->Models->get_user();
 		$this->load->view('template/header');
 		$this->load->view('template/menu');
-		$this->load->view('user/tambah_transaksi');
+		$this->load->view('user/tambah_transaksi',$data);
 		$this->load->view('template/footer');
 	}
 

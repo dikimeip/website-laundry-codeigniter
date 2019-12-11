@@ -84,4 +84,9 @@ class ModelLaundry extends CI_Model
 		$this->db->like('nama_paket',$cari);
 		return $this->db->get()->result_array();
 	}
+
+	public function paket_active()
+	{
+		return $this->db->get_where('paket',['active_paket' => 'Active'])->result_array();
+	}
 }
