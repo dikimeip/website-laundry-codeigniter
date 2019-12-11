@@ -117,6 +117,7 @@ class UserController extends CI_Controller
 
 	public function transaksi()
 	{
+		$data['trans'] = $this->Models->get_alltrans();
 		$this->load->view('template/header');
 		$this->load->view('template/menu');
 		$this->load->view('user/transaksi');
