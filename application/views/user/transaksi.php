@@ -33,7 +33,7 @@
 			<td><?php echo $no++ ?></td>
 			<td><?php echo $t['nama_user'] ?></td>
 			<td><?php echo $t['berat_transaksi'] ?></td>
-			<td><?php echo $t['harga_total'] ?></td>
+			<td><?php echo number_format($t['harga_total']) ?></td>
 			<td><?php echo $t['tanggal_masuk_transaksi'] ?></td>
 			<td><?php echo $t['keterangan_transaksi'] ?></td>
 			<td>
