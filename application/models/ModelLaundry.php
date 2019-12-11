@@ -89,4 +89,9 @@ class ModelLaundry extends CI_Model
 	{
 		return $this->db->get_where('paket',['active_paket' => 'Active'])->result_array();
 	}
+
+	public function input_transaksi($data)
+	{
+		return $this->db->insert('transaksi',$data);
+	}
 }

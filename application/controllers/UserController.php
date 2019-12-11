@@ -150,7 +150,14 @@ class UserController extends CI_Controller
 			'status_transaksi' => 'Baru'
 		];
 
-		var_dump($data);
+		$query = $this->Models->input_transaksi($data);
+		if ($query) {
+			$this->session->set_flashdata('success','Transaksi berhasil dilakukan');
+			redirect('UserController/transaksi');
+		} else {
+			$this->session->set_flashdata('success','Transaksi Gagal dilakukan');
+			redirect('UserController/transaksi');
+		}
 	}
 
 }

@@ -20,7 +20,7 @@
 			</div>
 			<div class="form-group">
 				<label>Masukan Berat Laundry</label>
-				<input type="text" name="berat" class="form-control">
+				<input type="number" name="berat" class="form-control">
 			</div>
 			<div class="form-group">
 				<label>Keterangan</label>
