@@ -168,11 +168,11 @@ class AdminController extends CI_Controller
 
 	public function pelanggan()
 	{
-		// $data['trans'] = $this->Models->get_alltrans();
-		// $data['no'] =1;
+		$data['user'] = $this->Models->get_user();
+		$data['no']=1;
 		$this->load->view('template/header');
 		$this->load->view('template/menuadmin');
-		$this->load->view('admin/pelanggan');
+		$this->load->view('admin/pelanggan',$data);
 		$this->load->view('template/footer');
 	}
 

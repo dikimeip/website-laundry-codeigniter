@@ -4,6 +4,11 @@
 		<a href="" class="btn btn-info">CETAK</a>
 	</div>
 </div>
+<?php if ($this->session->flashdata('success')): ?>
+	<div class="alert alert-success">
+		<p><?php echo $this->session->flashdata('success') ?></p>
+	</div>
+<?php endif ?>
 <table class="table table-hover">
 	<tr>
 		<th>NO</th>
