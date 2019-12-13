@@ -185,4 +185,16 @@ class AdminController extends CI_Controller
 		$this->load->view('admin/show_pelanggan',$data);
 		$this->load->view('template/footer');
 	}
+
+	public function delete_pelanggan($id)
+	{
+		$delete = $this->Models->delete_pelanggan($id);
+		if ($delete) {
+			$this->session->set_flashdata('success','Data success deleted');
+			redirect('AdminController/pelanggan');
+		} else {
+			$this->session->set_flashdata('success','Data success deleted');
+			redirect('AdminController/pelanggan');
+		}
+	}
 }

@@ -32,7 +32,7 @@
 			<td><?php echo $u['hp_user'] ?></td>
 			<td>
 				<a href="<?php echo base_url() ?>AdminController/show_pelanggan/<?php echo $u['id_user'] ?>" class="btn btn-info btn-sm">DETAIL</a>
-				<a href="<?php echo base_url() ?>UserController/edit_user/<?php echo $u['id_user'] ?>" class="btn btn-danger btn-sm">HAPUS</a>
+				<a onclick="return confirm('Hapus Data.?')" href="<?php echo base_url() ?>AdminController/delete_pelanggan/<?php echo $u['id_user'] ?>" class="btn btn-danger btn-sm">HAPUS</a>
 			</td>
 		</tr>
 	<?php endforeach ?>

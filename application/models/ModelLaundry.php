@@ -136,4 +136,11 @@ class ModelLaundry extends CI_Model
 		return $this->db->get()->result_array();
 	}
 
+
+	public function delete_pelanggan($id)
+	{
+		$this->db->where('id_user',$id);
+		return $this->db->delete('user');
+	}
+
 }
