@@ -128,4 +128,12 @@ class ModelLaundry extends CI_Model
 		return $this->db->delete('transaksi');
 	}
 
+	public function search_trans($key)
+	{
+		$this->db->select('*');
+		$this->db->from('transaksi');
+		$this->db->like('tanggal_masuk_transaksi',$key);
+		return $this->db->get()->result_array();
+	}
+
 }
