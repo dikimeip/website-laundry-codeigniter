@@ -130,9 +130,11 @@ class AdminController extends CI_Controller
 
 	public function transaksi()
 	{
+		$data['trans'] = $this->Models->get_alltrans();
+		$data['no'] =1;
 		$this->load->view('template/header');
 		$this->load->view('template/menuadmin');
-		$this->load->view('admin/transaksi');
+		$this->load->view('admin/transaksi',$data);
 		$this->load->view('template/footer');
 	}
 
