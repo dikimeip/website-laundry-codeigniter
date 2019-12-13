@@ -148,6 +148,13 @@ class AdminController extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
+	public function hapus_trans($id)
+	{
+		$this->Models->delete_transaksi($id);
+		$this->session->set_flashdata('Success','Data success deleted');
+		redirect('AdminController/transaksi');
+	}
+
 
 	
 }
