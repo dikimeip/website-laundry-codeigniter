@@ -42,7 +42,7 @@
                                 <a class="nav-link" href="<?php echo base_url('AdminController') ?>"><i class="fa fa-fw fa-home"></i>Dasboard</a>
                             </li>
                              <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-fw fa-plus"></i>Transaksi</a>
+                                <a class="nav-link" href="<?php echo base_url('AdminController/transaksi') ?>"><i class="fa fa-fw fa-plus"></i>Transaksi</a>
                             </li>
                              <li class="nav-item">
                                 <a class="nav-link" href=""><i class="fa fa-fw fa-user"></i>Pelanggan</a>
