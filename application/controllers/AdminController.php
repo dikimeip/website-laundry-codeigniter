@@ -179,9 +179,10 @@ class AdminController extends CI_Controller
 
 	public function show_pelanggan($id)
 	{
+		$data['pelanggan'] = $this->Models->get_id_user($id);
 		$this->load->view('template/header');
 		$this->load->view('template/menuadmin');
-		$this->load->view('admin/show_pelanggan');
+		$this->load->view('admin/show_pelanggan',$data);
 		$this->load->view('template/footer');
 	}
 }
