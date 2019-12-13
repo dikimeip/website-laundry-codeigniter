@@ -166,6 +166,16 @@ class AdminController extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
+	public function pelanggan()
+	{
+		// $data['trans'] = $this->Models->get_alltrans();
+		// $data['no'] =1;
+		$this->load->view('template/header');
+		$this->load->view('template/menuadmin');
+		$this->load->view('admin/pelanggan');
+		$this->load->view('template/footer');
+	}
+
 
 	
 }
