@@ -140,11 +140,11 @@ class AdminController extends CI_Controller
 
 	public function detail_trans($id)
 	{
-		//$data['trans'] = $this->Models->get_id_trans($id);
+		$data['trans'] = $this->Models->get_id_trans($id);
 		//var_dump($data['trans']);
 		$this->load->view('template/header');
-		$this->load->view('template/menu');
-		$this->load->view('admin/detail_transaksi');
+		$this->load->view('template/menuadmin');
+		$this->load->view('admin/detail_transaksi',$data);
 		$this->load->view('template/footer');
 	}
 
