@@ -30,7 +30,7 @@
 			<td><?php echo $t['tanggal_masuk_transaksi'] ?></td>
 			<td><?php echo $t['keterangan_transaksi'] ?></td>
 			<td>
-				<a href="<?php echo base_url() ?>UserController/show_trans/<?php echo $t['id_transaksi'] ?>" class="btn btn-info btn-sm">DETAIL</a>
+				<a href="<?php echo base_url() ?>AdminController/detail_trans/<?php echo $t['id_transaksi'] ?>" class="btn btn-info btn-sm">DETAIL</a>
 				<a href="" class="btn btn-warning btn-sm">HAPUS</a>
 			</td>
 		</tr>
