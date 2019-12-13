@@ -4,7 +4,7 @@
 		<a href="" class="btn btn-info">CETAK</a>
 	</div>
 	<div class="col-md-4">
-		<form>
+		<form action="<?php echo base_url('AdminController/cari_pelanggan') ?>" method="post">
 			<div class="form-group">
 				<input type="text" name="cari" class="form-control" placeholder="Masukan Nama Pelanggan">
 			</div>

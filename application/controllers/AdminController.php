@@ -155,14 +155,14 @@ class AdminController extends CI_Controller
 		redirect('AdminController/transaksi');
 	}
 
-	public function cari_trans()
+	public function cari_pelanggan()
 	{
-		$key = $this->input->post('cari');
-		$data['trans'] = $this->Models->search_trans($key);
+		
+		$data['user'] = $this->Models->cari_user();
 		$data['no'] =1;
 		$this->load->view('template/header');
 		$this->load->view('template/menuadmin');
-		$this->load->view('admin/transaksi',$data);
+		$this->load->view('admin/pelanggan',$data);
 		$this->load->view('template/footer');
 	}
 
