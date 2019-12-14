@@ -261,5 +261,14 @@ class AdminController extends CI_Controller
 		}
 	}
 
+	public function edit_karyawan($id)
+	{
+		$data['kary'] = $this->Models->get_karyawan($id);
+		$this->load->view('template/header');
+		$this->load->view('template/menuadmin');
+		$this->load->view('admin/edit_karyawan',$data);
+		$this->load->view('template/footer');
+	}
+
 
 }

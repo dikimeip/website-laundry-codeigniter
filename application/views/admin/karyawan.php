@@ -34,7 +34,7 @@
 			<td><?php echo $k['jabatan_karyawan'] ?></td>
 			<td><?php echo $k['foto_karyawan'] ?></td>
 			<td>
-				<a href="" class="btn btn-info btn-sm">EDIT</a>
+				<a href="<?php echo base_url() ?>AdminController/edit_karyawan/<?php echo $k['id_karyawan'] ?>" class="btn btn-info btn-sm">EDIT</a>
 				<a href="" class="btn btn-danger btn-sm">HAPUS</a>
 			</td>
 		</tr>
