@@ -330,5 +330,17 @@ class AdminController extends CI_Controller
 		}
 	}
 
+	public function search_karyawan()
+	{
+		$key = $this->input->post('cari');
+		$data['karyawan'] = $this->Models->cari_karyawan($key);
+		$this->load->view('template/header');
+		$this->load->view('template/menuadmin');
+		$this->load->view('admin/karyawan',$data);
+		$this->load->view('template/footer');
+
+
+	}
+
 
 }

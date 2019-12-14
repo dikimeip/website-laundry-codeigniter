@@ -170,4 +170,12 @@ class ModelLaundry extends CI_Model
 		return $this->db->delete('karyawan');
 	}
 
+	public function cari_karyawan($key)
+	{
+		$this->db->select('*');
+		$this->db->from('karyawan');
+		$this->db->like('nama_karyawan',$key);
+		return $this->db->get()->result_array();
+	}
+
 }
