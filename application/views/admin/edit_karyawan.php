@@ -1,8 +1,9 @@
 <h1>EDIT KARYAWAN</h1>
-<form action="<?php echo base_url('AdminController/do_tambahkaryawan') ?>" method="post" enctype="multipart/form-data">
+<form action="<?php echo base_url('AdminController/do_editkaryawan') ?>" method="post" enctype="multipart/form-data">
 	<div class="form-group">
 		<label>MASUKAN NAMA</label>
 		<input type="text" name="nama" placeholder="Masukan Nama" class="form-control" value="<?php echo $kary['nama_karyawan'] ?>">
+		<input type="hidden" name="id" value="<?php echo $kary['id_karyawan'] ?>">
 	</div>
 	<div class="form-group">
 		<label>MASUKAN USERNAME</label>
@@ -25,7 +26,7 @@
 	<div class="form-group">
 		<label>MASUKAN FOTO</label><br>
 		<img style="width: 50px" src="<?php echo base_url('asset/foto/'.$kary['foto_karyawan']) ?>">
-		<input type="file" name="foto" placeholder="Masukan Nama" class="form-control" required="">
+		<input type="file" name="foto" placeholder="Masukan Nama" class="form-control">
 	</div>
 	<input type="submit" value="SIMPAN" class="btn btn-info">
 </form>

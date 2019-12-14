@@ -158,4 +158,10 @@ class ModelLaundry extends CI_Model
 		return $this->db->get_where('karyawan',['id_karyawan' => $id])->row_array();
 	}
 
+	public function update_karyawan($id,$data)
+	{
+		$this->db->where('id_karyawan',$id);
+		return $this->db->update('karyawan',$data);
+	}
+
 }

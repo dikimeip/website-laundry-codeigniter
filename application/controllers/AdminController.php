@@ -270,5 +270,31 @@ class AdminController extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
+	public function do_editkaryawan()
+	{
+		$gambar = $_FILES['foto']['name'];
+		if ($gambar == "") {
+			$id = $this->input->post('id');
+			$data = [
+				'nama_karyawan' => $this->input->post('nama'),
+				'username_karyawan' => $this->input->post('uname'),
+				'alamat_karyawan' => $this->input->post('alamat'),
+				'jabatan_karyawan' => $this->input->post('jabatan'),
+			];
+
+			$query = $this->Models->update_karyawan($id,$data);
+			if ($query) {
+				$this->session->set_flashdata('success','Data success update');
+				redirect('AdminController/karyawan');
+			} else {
+				$this->session->set_flashdata('success','Data failed update');
+				redirect('AdminController/karyawan');
+			}
+
+		} else {
+			echo "ada";
+		}
+	}
+
 
 }
