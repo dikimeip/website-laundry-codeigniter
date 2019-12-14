@@ -229,7 +229,19 @@ class AdminController extends CI_Controller
 			$this->load->view('admin/tambah_karyawan');
 			$this->load->view('template/footer');
 		} else {
-			echo "Ok";
+			$gambar = $_FILES['foto']['name'];
+			if ($gambar == "") {
+				echo "Gagal";
+			} else {
+				$config['allowed_types'] = "png|jpg";
+				$config['upload_path'] = "./asset/foto/";
+				$this->load->library('upload',$config);
+				if (!$this->upload->do_upload('foto')) {
+					echo "Gagal";
+				} else {
+					echo "Berhasil";
+				}
+			}
 		}
 	}
 
