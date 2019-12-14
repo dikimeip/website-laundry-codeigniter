@@ -239,7 +239,23 @@ class AdminController extends CI_Controller
 				if (!$this->upload->do_upload('foto')) {
 					echo "Gagal";
 				} else {
-					echo "Berhasil";
+					$data = [
+						'nama_karyawan' => $this->input->post('nama'),
+						'username_karyawan' => $this->input->post('uname'),
+						'password_karyawan' => $this->input->post('pswd2'),
+						'alamat_karyawan' => $this->input->post('alamat'),
+						'jabatan_karyawan' => $this->input->post('jabatan'),
+						'foto_karyawan' =>  $_FILES['foto']['name'],
+						'active_karyawan' => 1,
+					];
+					$query = $this->Models->post_karyawan($data);
+					if ($query) {
+						$this->session->set_flashdata('success','Data success post');
+						redirect('AdminController/karyawan');
+					} else {
+						$this->session->set_flashdata('success','Data gagal post');
+						redirect('AdminController/karyawan');
+					}
 				}
 			}
 		}

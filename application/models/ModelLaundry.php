@@ -147,5 +147,9 @@ class ModelLaundry extends CI_Model
 	{
 		return $this->db->get('karyawan')->result_array();
 	}
+	public function post_karyawan($data)
+	{
+		return $this->db->insert('karyawan',$data);
+	}
 
 }
