@@ -215,5 +215,23 @@ class AdminController extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
+	public function do_tambahkaryawan()
+	{
+		$this->form_validation->set_rules('nama','Nama','required');
+		$this->form_validation->set_rules('uname','Username','required');
+		$this->form_validation->set_rules('pswd1','PASSWORD','required|matches[pswd2]');
+		$this->form_validation->set_rules('pswd2','PASSWORD','required|matches[pswd1]');
+		$this->form_validation->set_rules('alamat','Alamat','required');
+
+		if ($this->form_validation->run() == false) {
+			$this->load->view('template/header');
+			$this->load->view('template/menuadmin');
+			$this->load->view('admin/tambah_karyawan');
+			$this->load->view('template/footer');
+		} else {
+			echo "Ok";
+		}
+	}
+
 
 }
