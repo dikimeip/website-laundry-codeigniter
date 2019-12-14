@@ -242,7 +242,7 @@ class AdminController extends CI_Controller
 					$data = [
 						'nama_karyawan' => $this->input->post('nama'),
 						'username_karyawan' => $this->input->post('uname'),
-						'password_karyawan' => $this->input->post('pswd2'),
+						'password_karyawan' =>md5($this->input->post('pswd2')),
 						'alamat_karyawan' => $this->input->post('alamat'),
 						'jabatan_karyawan' => $this->input->post('jabatan'),
 						'foto_karyawan' =>  $_FILES['foto']['name'],
