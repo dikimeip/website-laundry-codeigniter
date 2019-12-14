@@ -197,4 +197,12 @@ class AdminController extends CI_Controller
 			redirect('AdminController/pelanggan');
 		}
 	}
+
+	public function karyawan()
+	{
+		$this->load->view('template/header');
+		$this->load->view('template/menuadmin');
+		$this->load->view('admin/karyawan');
+		$this->load->view('template/footer');
+	}
 }

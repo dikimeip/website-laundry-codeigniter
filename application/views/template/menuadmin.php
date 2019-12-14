@@ -48,7 +48,7 @@
                                 <a class="nav-link" href="<?php echo base_url('AdminController/pelanggan') ?>"><i class="fa fa-fw fa-user"></i>Pelanggan</a>
                             </li>
                              <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-fw fa-cog"></i>Karyawan</a>
+                                <a class="nav-link" href="<?php echo base_url('AdminController/karyawan') ?>"><i class="fa fa-fw fa-cog"></i>Karyawan</a>
                             </li>
                              <li class="nav-item">
                                 <a class="nav-link" href="<?php echo base_url('AdminController/paket') ?>"><i class="fa fa-fw fa-plus"></i>Paket Promo</a>
