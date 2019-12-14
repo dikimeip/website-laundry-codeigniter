@@ -35,10 +35,12 @@ class LoginController extends CI_Controller
 				redirect('AdminController/index');
 				$this->session->set_userdata('ok');
 			} else {
-				echo "Gagal Login";
+				$this->session->set_flashdata('gagal','Login Gagal..');
+				redirect('LoginController/index');
 			}
 		} else {
-			echo "NotShow";
+			$this->session->set_flashdata('gagal','Login Gagal..');
+			redirect('LoginController/index');
 		}
 	}
 
