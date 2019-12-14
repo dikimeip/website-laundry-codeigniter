@@ -143,4 +143,9 @@ class ModelLaundry extends CI_Model
 		return $this->db->delete('user');
 	}
 
+	public function karyawan()
+	{
+		return $this->db->get('karyawan')->result_array();
+	}
+
 }

@@ -200,9 +200,12 @@ class AdminController extends CI_Controller
 
 	public function karyawan()
 	{
+		$data['karyawan'] = $this->Models->karyawan();
 		$this->load->view('template/header');
 		$this->load->view('template/menuadmin');
-		$this->load->view('admin/karyawan');
+		$this->load->view('admin/karyawan',$data);
 		$this->load->view('template/footer');
 	}
+
+
 }
