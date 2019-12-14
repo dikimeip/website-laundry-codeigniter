@@ -32,7 +32,9 @@
 			<td><?php echo $k['username_karyawan'] ?></td>
 			<td><?php echo $k['alamat_karyawan'] ?></td>
 			<td><?php echo $k['jabatan_karyawan'] ?></td>
-			<td><?php echo $k['foto_karyawan'] ?></td>
+			<td>
+				<img style="width: 50px" src="<?php echo base_url('asset/foto/'.$k['foto_karyawan']) ?>">
+			</td>
 			<td>
 				<a href="<?php echo base_url() ?>AdminController/edit_karyawan/<?php echo $k['id_karyawan'] ?>" class="btn btn-info btn-sm">EDIT</a>
 				<a href="" class="btn btn-danger btn-sm">HAPUS</a>

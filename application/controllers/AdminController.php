@@ -292,7 +292,29 @@ class AdminController extends CI_Controller
 			}
 
 		} else {
-			echo "ada";
+			$config['allowed_types'] = "png|jpg";
+			$config['upload_path'] = "./asset/foto/";
+			$this->load->library('upload',$config);
+			if (!$this->upload->do_upload('foto')) {
+				echo "Gagal";
+			} else {
+				$id = $this->input->post('id');
+				$data = [
+					'nama_karyawan' => $this->input->post('nama'),
+					'username_karyawan' => $this->input->post('uname'),
+					'alamat_karyawan' => $this->input->post('alamat'),
+					'jabatan_karyawan' => $this->input->post('jabatan'),
+					'foto_karyawan' =>  $_FILES['foto']['name'],
+				];
+				$query = $this->Models->update_karyawan($id,$data);
+				if ($query) {
+					$this->session->set_flashdata('success','Data success post');
+					redirect('AdminController/karyawan');
+				} else {
+					$this->session->set_flashdata('success','Data gagal post');
+					redirect('AdminController/karyawan');
+				}
+			}
 		}
 	}
 
