@@ -164,4 +164,10 @@ class ModelLaundry extends CI_Model
 		return $this->db->update('karyawan',$data);
 	}
 
+	public function delete_karyawan($id)
+	{
+		$this->db->where('id_karyawan',$id);
+		return $this->db->delete('karyawan');
+	}
+
 }

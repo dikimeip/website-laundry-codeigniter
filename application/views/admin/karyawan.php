@@ -37,7 +37,7 @@
 			</td>
 			<td>
 				<a href="<?php echo base_url() ?>AdminController/edit_karyawan/<?php echo $k['id_karyawan'] ?>" class="btn btn-info btn-sm">EDIT</a>
-				<a href="" class="btn btn-danger btn-sm">HAPUS</a>
+				<a onclick="return confirm('Hapus data..?')" href="<?php echo base_url() ?>AdminController/hapus_karyawan/<?php echo $k['id_karyawan'] ?>" class="btn btn-danger btn-sm">HAPUS</a>
 			</td>
 		</tr>
 	<?php endforeach ?>

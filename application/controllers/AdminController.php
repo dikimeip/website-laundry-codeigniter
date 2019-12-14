@@ -318,5 +318,17 @@ class AdminController extends CI_Controller
 		}
 	}
 
+	public function hapus_karyawan($id)
+	{
+		$query = $this->Models->delete_karyawan($id);
+		if ($query) {
+			$this->session->set_flashdata('success','Data success Delete');
+			redirect('AdminController/karyawan');
+		} else {
+			$this->session->set_flashdata('success','Data gagal Delete');
+			redirect('AdminController/karyawan');
+		}
+	}
+
 
 }
