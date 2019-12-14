@@ -207,5 +207,13 @@ class AdminController extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
+	public function tambah_karyawan()
+	{
+		$this->load->view('template/header');
+		$this->load->view('template/menuadmin');
+		$this->load->view('admin/tambah_karyawan');
+		$this->load->view('template/footer');
+	}
+
 
 }

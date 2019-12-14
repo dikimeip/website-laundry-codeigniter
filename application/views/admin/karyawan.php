@@ -1,7 +1,7 @@
 <h1>DATA KARYAWAN</h1>
 <div class="row">
 	<div class="col-md-8">
-		<a href="" class="btn btn-info">TAMBAH</a>
+		<a href="<?php echo base_url('AdminController/tambah_karyawan') ?>" class="btn btn-info">TAMBAH</a>
 	</div>
 	<div class="col-md-4">
 		<form>
