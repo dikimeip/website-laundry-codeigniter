@@ -349,6 +349,14 @@ class AdminController extends CI_Controller
 		$this->load->view('cetak/transaksi',$data);
 	}
 
+	public function cetak_pelanggan()
+	{
+		
+		$data['user'] = $this->Models->get_user();
+		$data['no']=1;
+		$this->load->view('cetak/pelanggan',$data);
+	}
+
 	public function cari_trans()
 	{
 		$key = $this->input->post('cari');

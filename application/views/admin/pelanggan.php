@@ -1,7 +1,7 @@
 <h1>DAFTAR PELANGGAN</h1>
 <div class="row">
 	<div class="col-md-8">
-		<a href="" class="btn btn-info">CETAK</a>
+		<a href="<?php echo base_url('AdminController/cetak_pelanggan') ?>" class="btn btn-info">CETAK</a>
 	</div>
 	<div class="col-md-4">
 		<form action="<?php echo base_url('AdminController/cari_pelanggan') ?>" method="post">
