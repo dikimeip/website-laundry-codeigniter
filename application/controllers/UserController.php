@@ -221,4 +221,10 @@ class UserController extends CI_Controller
 		}
 	}
 
+	public function cetak_trans($id)
+	{
+		$data['trans'] = $this->Models->get_id_trans($id);
+		$this->load->view('cetak/cetak_transaksi',$data);
+	}
+
 }

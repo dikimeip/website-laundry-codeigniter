@@ -33,7 +33,7 @@
 			<td><?php echo $t['keterangan_transaksi'] ?></td>
 			<td>
 				<a href="<?php echo base_url() ?>UserController/show_trans/<?php echo $t['id_transaksi'] ?>" class="btn btn-info btn-sm">DETAIL</a>
-				<a href="" class="btn btn-success btn-sm">CETAK</a>
+				<a href="<?php echo base_url() ?>UserController/cetak_trans/<?php echo $t['id_transaksi'] ?>" class="btn btn-success btn-sm">CETAK</a>
 			</td>
 		</tr>
 	<?php endforeach ?>
