@@ -13,7 +13,7 @@
                         <li class="nav-item dropdown nav-user">
                             <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="<?php echo base_url() ?>asset/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
-                                <a class="dropdown-item" href="<?php echo base_url('LoginController/logout') ?>"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                <a class="dropdown-item" href="<?php echo base_url('AdminController/logout') ?>"><i class="fas fa-power-off mr-2"></i>Logout</a>
                             </div>
                         </li>
                     </ul>
@@ -54,7 +54,7 @@
                                 <a class="nav-link" href="<?php echo base_url('AdminController/paket') ?>"><i class="fa fa-fw fa-plus"></i>Paket Promo</a>
                             </li>
                              <li class="nav-item">
-                                <a class="nav-link" href="<?php echo base_url('LoginController/logout') ?>"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                <a class="nav-link" href="<?php echo base_url('AdminController/logout') ?>"><i class="fas fa-power-off mr-2"></i>Logout</a>
                             </li>
                         </ul>
                     </div>

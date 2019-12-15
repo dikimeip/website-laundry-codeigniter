@@ -230,4 +230,10 @@ class UserController extends CI_Controller
 		$this->load->view('cetak/cetak_transaksi',$data);
 	}
 
+	public function logout()
+	{
+		$this->session->unset_userdata('user');
+		redirect('LoginController/index');
+	}
+
 }

@@ -372,5 +372,11 @@ class AdminController extends CI_Controller
 		$this->load->view('template/footer');
 	}
 
+	public function logout()
+	{
+		$this->session->unset_userdata('admin');
+		redirect('LoginController/index');
+	}
+
 
 }
