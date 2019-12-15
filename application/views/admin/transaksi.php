@@ -1,7 +1,7 @@
 <h1>HALAMAN TRANSAKSI</h1>
 <div class="row">
 	<div class="col-md-8">
-		<a href="" class="btn btn-info">CETAK</a>
+		<a href="<?php echo base_url('AdminController/cetak_trans') ?>" class="btn btn-info">CETAK</a>
 	</div>
 </div>
 <?php if ($this->session->flashdata('success')): ?>
