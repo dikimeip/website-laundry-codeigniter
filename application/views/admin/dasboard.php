@@ -4,25 +4,25 @@
 	<div class="col-md-4">
 		<div class="alert alert-info">
 			<p class="text-center"><b>TRANSAKSI</b></p>
-			<p>Jumlah Produk : <?php echo count($trans) ?>  Barang</p>
+			<p>Jumlah Transaksi : <?php echo count($trans) ?>  Transaksi</p>
 		</div>
 	</div>
 	<div class="col-md-4">
 		<div class="alert alert-info">
 			<p class="text-center"><b>PAKET</b></p>
-			<p>Jumlah Produk : <?php echo count($pakets) ?> Barang</p>
+			<p>Jumlah Paket : <?php echo count($pakets) ?> Paket</p>
 		</div>
 	</div>
 	<div class="col-md-4">
 		<div class="alert alert-info">
 			<p class="text-center"><b>USER</b></p>
-			<p>Jumlah Produk : <?php echo count($user) ?> Barang</p>
+			<p>Jumlah User : <?php echo count($user) ?> User</p>
 		</div>
 	</div>
 	<div class="col-md-4">
 		<div class="alert alert-info">
 			<p class="text-center"><b>KARYAWAN</b></p>
-			<p>Jumlah Produk : <?php echo count($karyawan) ?> Barang</p>
+			<p>Jumlah Karyawan : <?php echo count($karyawan) ?> Karyawan</p>
 		</div>
 	</div>
 </div>
