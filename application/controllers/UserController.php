@@ -20,7 +20,7 @@ class UserController extends CI_Controller
 	
 	public function index()
 	{
-		//$data['ses'] = $this->session->userdata('isUser');
+		$data['ses'] = $this->session->userdata('nama');
 		$data['trans'] = $this->Models->get_alltrans();
 		$data['pakets'] = $this->Models->get_paket();
 		$data['user'] = $this->Models->get_user();

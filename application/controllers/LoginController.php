@@ -23,8 +23,10 @@ class LoginController extends CI_Controller
 		if ($level == '0') {
 			$login = $this->Models->Loginuser($email,$password);
 			if (count($login) > 0 ) {
+				$this->session->set_userdata([
+					'user' => 'isUser'
+				]);
 				redirect('UserController/index');
-				$this->session->set_userdata('ok');
 			} else {
 				$this->session->set_flashdata('gagal','Login Gagal..');
 				redirect('LoginController/index');
@@ -32,8 +34,10 @@ class LoginController extends CI_Controller
 		} elseif ($level == '1') {
 			$loginn = $this->Models->LoginAdmin($email,$password);
 			if (count($loginn) > 0 ) {
+				$this->session->set_userdata([
+					'admin' => 'isAdmin'
+				]);
 				redirect('AdminController/index');
-				$this->session->set_userdata('ok');
 			} else {
 				$this->session->set_flashdata('gagal','Login Gagal..');
 				redirect('LoginController/index');

@@ -1,5 +1,5 @@
 
-<h1>DASBOARD MENU </h1>
+<h1>DASBOARD MENU <?php echo $ses ?> </h1>
 <div class="row">
 	<div class="col-md-4">
 		<div class="alert alert-info">
