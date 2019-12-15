@@ -345,7 +345,8 @@ class AdminController extends CI_Controller
 	public function cetak_trans()
 	{
 		$data['trans'] = $this->Models->get_alltrans();
-		$this->load->view('cetak/transaksi');
+		$data['no'] = 1;
+		$this->load->view('cetak/transaksi',$data);
 	}
 
 
