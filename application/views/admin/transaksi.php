@@ -3,6 +3,9 @@
 	<div class="col-md-8">
 		<a href="<?php echo base_url('AdminController/cetak_trans') ?>" class="btn btn-info">CETAK</a>
 	</div>
+	<div class="col-md-4">
+	
+	</div>
 </div>
 <?php if ($this->session->flashdata('success')): ?>
 	<div class="alert alert-success">

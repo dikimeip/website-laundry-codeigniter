@@ -349,5 +349,16 @@ class AdminController extends CI_Controller
 		$this->load->view('cetak/transaksi',$data);
 	}
 
+	public function cari_trans()
+	{
+		$key = $this->input->post('cari');
+		$data['trans'] = $this->Models->search_trans($key);
+		$data['no'] =1;
+		$this->load->view('template/header');
+		$this->load->view('template/menuadmin');
+		$this->load->view('admin/transaksi',$data);
+		$this->load->view('template/footer');
+	}
+
 
 }
