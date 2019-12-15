@@ -12,10 +12,14 @@ class AdminController extends CI_Controller
 		$this->load->library('session');
 		$this->load->library('form_validation');
 		$this->load->helper('form');
+		if ($this->session->userdata('admin') == "") {
+			redirect('LoginController/index');
+		}
 	}
 
 	public function index()
 	{
+		$data['ses'] = $this->session->userdata('admin');
 		$data['trans'] = $this->Models->get_alltrans();
 		$data['pakets'] = $this->Models->get_paket();
 		$data['user'] = $this->Models->get_user();

@@ -13,14 +13,14 @@ class UserController extends CI_Controller
 		$this->load->helper(array('form', 'url'));
 		$this->load->library('form_validation');
 		$this->load->library('session');
-		// if ($this->session->userdata('isUser')) {
-		// 	redirect('LoginController/index');
-		// }
+		if ($this->session->userdata('user') == "") {
+			redirect('LoginController/index');
+		}
 	}
 	
 	public function index()
 	{
-		$data['ses'] = $this->session->userdata('nama');
+		$data['ses'] = $this->session->userdata('user');
 		$data['trans'] = $this->Models->get_alltrans();
 		$data['pakets'] = $this->Models->get_paket();
 		$data['user'] = $this->Models->get_user();

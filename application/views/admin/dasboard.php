@@ -1,4 +1,4 @@
-<h1>ADMIN DASBOARD <?php echo date('Y-m-d') ?> </h1>
+<h1>ADMIN DASBOARD <?php echo $ses ?> </h1>
 <br><hr>
 <div class="row">
 	<div class="col-md-4">
