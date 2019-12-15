@@ -16,9 +16,13 @@ class AdminController extends CI_Controller
 
 	public function index()
 	{
+		$data['trans'] = $this->Models->get_alltrans();
+		$data['pakets'] = $this->Models->get_paket();
+		$data['user'] = $this->Models->get_user();
+		$data['karyawan'] = $this->Models->karyawan();
 		$this->load->view('template/header');
 		$this->load->view('template/menuadmin');
-		$this->load->view('admin/dasboard');
+		$this->load->view('admin/dasboard',$data);
 		$this->load->view('template/footer');
 	}
 
